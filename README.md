@@ -8,7 +8,7 @@ $ docker build -t djangokubernetesproject .
 ### To test before Kubernetes :
 
 ```
-$ docker run -p 80:8000 djangokubernetesproject
+$ docker run -p 80:8000 djangokubernetesproject .
 ```
 In a browser : http://127.0.0.1
 
