@@ -31,7 +31,7 @@ django   NodePort   10.98.234.155   <none>        8000:31937/TCP   4h53m
 ```
 * To see what is the INTERNAL-IP :
 ```
-$ kubectl get nodes -o wide --> 
+$ kubectl get nodes -o wide 
 ```
 Example of Output :
 
