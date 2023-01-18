@@ -6,3 +6,7 @@ ADD . /app
 WORKDIR /app
 EXPOSE 8000
 CMD ["gunicorn", "--bind", ":8000", "--workers", "3", "djangokubernetesproject.wsgi"]
+CMD ["apt-get","install","python3-dev","default-libmysqlclient-dev","build-essential"]
+CMD ["pip","install","mysqlclient"]
+CMD ["python3", "manage.py", "migrate"]
+

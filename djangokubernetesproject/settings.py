@@ -77,8 +77,11 @@ WSGI_APPLICATION = 'djangokubernetesproject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'django_bdd',
+	'USER': 'root',
+	'PASSWORD' : 'test1234',
+	'HOST' : '172.17.0.8',
     }
 }
 
