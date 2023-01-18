@@ -1,6 +1,4 @@
-# Kubernetes-Django
-
-## To deploy this solution :
+# To deploy this solution :
 
 git clone https://github.com/Jocor1n/Kubernetes-Django.git
 
