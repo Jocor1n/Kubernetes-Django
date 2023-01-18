@@ -1,0 +1,38 @@
+<h1>Voici la liste des incidents :</h1>
+<table style="width:100%">
+  <tr>
+    <td><strong>Titre :</strong></td>
+    <td><strong>Description :</strong></td>
+  </tr>
+  {% for i in incident %}
+  <tr>
+    <td>{{i.titre}}</td>
+    <td>{{i.description}}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+<h2>Ajouter un incident</h2>
+<form method="POST" >
+    {% csrf_token %} <!-- intègre template csrf_token pour protéger formulaire des attaques -->
+    <p><strong> Pour ajouter un message : </strong></p>
+    <p>Titre :</p>
+    <input text="message" name="titre" autocomplete="off" rows="3" ></input>
+    <p>Description:</p>
+    <textarea text="message" name="description" autocomplete="off" cols="70" rows="3" ></textarea>
+    <br></br>
+    <input type="submit" name="add_message" value="Ajouter le message" />
+</form>
+
+<form method="POST">
+{% csrf_token %}
+<h2><strong>Pour supprimer un incident </strong></h2>
+<p>Incident à supprimer :</p>
+<select name="incident_a_supprimer"/>
+    {% for i in incident %}
+      <option  value="{{i.titre}}">{{i.titre}}</option>
+    {% endfor %}
+</select>
+<br></br>
+<input type="submit" name="supprimer" value="Valider" />
+</form>
